@@ -62,9 +62,7 @@ function updateTitlePosition() {
 }
 
 const videoDatabase = [
-    { id: 1, title: "Bloxfeed 1", videoId: "M7lc1UVf-VE", reviewerName: "Admin Playz", subs: "5.4k", reviewText: "NameRacketeer is a professional video editor who knows how long for but excellent quality. During my recent short, 0:00 to 0:28 he finishes it for 28 minutes, I asked him what to do and he bring it to life, what I asked for, and more. I would recommend editing this guy.", thumbnailPath: "assets/teset.png", avatar: "https://placehold.co/100x100/1e40af/ffffff?text=AP" },
-    { id: 2, title: "Obby Run", videoId: "aqz-KE-bpKQ", reviewerName: "Speedy Gamer", subs: "12k", reviewText: "Incredible edits! The pacing is perfect and the visual effects added so much retention to my video. Definitely my go-to editor from now on.", thumbnailPath: "assets/teset.png", avatar: "https://placehold.co/100x100/991b1b/ffffff?text=SG" },
-    { id: 3, title: "Tycoon Max", videoId: "dQw4w9WgXcQ", reviewerName: "Creator Pro", subs: "89k", reviewText: "Delivered exactly what was promised and ahead of schedule. The transitions are super clean. Highly recommend if you want to level up your content.", thumbnailPath: "assets/teset.png", avatar: "https://placehold.co/100x100/065f46/ffffff?text=CP" },
+    { id: 1, title: "Bloxfeed 1", videoId: "uQe8S3UA4kw", reviewerName: "Admin Playz", subs: "4.37k", reviewText: "NameRacketeer is a professional video editor who knows how long for but excellent quality. During my recent short, 0:00 to 0:28 he finishes it for 28 minutes, I asked him what to do and he bring it to life, what I asked for, and more. I would recommend editing this guy.", thumbnailPath: "assets/snapshot1.jpg", avatar: "https://yt3.googleusercontent.com/xrXGiiA4SJL5hFzF3o09b0GZ5_yKYZ0yEDgEHQ12tUOc7kB7YvzNTnvlraLUz80dG3CwTdeDbg=s160-c-k-c0x00ffffff-no-rj" },
 ];
 
 let carouselData = [];
