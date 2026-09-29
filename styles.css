@@ -198,13 +198,13 @@ nav a{
 }
 
 #pg2 {
-  scroll-margin-top: 125px; 
+  scroll-margin-top: 120px; 
   text-align: left;
 }
 
 .spacer {
-	margin-top: 10000px;
-	margin-bottom: 10000px;
+	margin-top: 100px;
+	margin-bottom: 100px;
 }
 
 .ytshortpvactive {
@@ -238,7 +238,7 @@ nav a{
             display: flex;
             justify-content: center;
             align-items: center;
-            margin-top: 2rem;
+            margin-top: -20px;
             perspective: 1200px;
             transform-style: preserve-3d;
         }
@@ -310,8 +310,6 @@ nav a{
             border: none;
         }
 
-
-
         #review-box {
             position: absolute;
             background-color: #0f0f0f;
@@ -327,11 +325,6 @@ nav a{
             transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
             pointer-events: none;
             box-shadow: 10px 10px 30px rgba(0,0,0,0.6);
-        }
-
-        #review-box.active {
-            opacity: 1;
-            transform: translateY(0);
         }
 
         .review-header {
@@ -389,17 +382,22 @@ nav a{
             z-index: 0;
         }
 		
-		/* Initial hidden state for the carousel */
-#carousel, #review-box {
+#carousel{
     opacity: 0;
     transform: translateY(60px);
-    transition: opacity 0.3s ease-out, transform 0.3s ease-out;
-    pointer-events: none; /* Prevent interaction while hidden */
+    pointer-events: none;
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-/* Revealed state triggered by JS */
-#carousel.revealed, #review-box.revealed {
+#carousel.revealed {
     opacity: 1;
     transform: translateY(0);
     pointer-events: auto;
+}
+
+#carousel.revealed ~ #review-box.active {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+    transition-delay: 0.2s; /* Slight delay so it appears right after the carousel enters */
 }
