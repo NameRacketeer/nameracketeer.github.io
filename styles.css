@@ -1,0 +1,405 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing:border-box;
+	font-family: Comic Sans MS, Arial, Helvetica, sans-serif;
+	  scroll-behavior: smooth;
+
+}
+.bgcont {
+position: relative;
+  min-height: 100vh;
+  color: white;
+}
+
+.bgcont::before {
+  content: "";
+  position: fixed;
+  top: -200px;
+  left: -200px;
+  right: -200px;
+  bottom: -200px;
+  z-index: -1;
+  background-image: url('assets/1.png');
+  background-size: cover;
+  background-position: center;
+  filter: blur(60px);
+}
+
+/* navbar */
+
+nav {
+	background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    padding:15px 40px;
+    display:flex;
+    justify-content:center;
+    gap:20px;
+	width: 100%;
+	box-sizing: border-box;
+    
+}
+
+.navbar-custom{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    display:flex;
+    align-items:center;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.labubu {
+	display: inline-flex;
+	flex-direction: column;
+	align-items: stretch;
+	padding:10px 0px 6px 0px;
+    border:2px solid rgba(255,255,255,0.3);
+	cursor: pointer;
+    transition:0.3s;
+}
+
+nav a{
+	letter-spacing:0.5px;
+    text-decoration:none;
+    color:white !important;
+	font-family:Comic Sans MS;
+    font-weight:bold;
+	transition:0.3s;
+}
+
+.oceg {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}
+
+.setas {
+	opacity: 0;
+	width: 20px;
+	height:20px;
+	transition: 0.3s;
+}
+
+.linha {
+	display: block;
+	height: 2.5px;
+	margin-top: 3px;
+	width: 0%;
+	object-fit: fill;
+	opacity: 0;
+	transition: .3s;
+}
+
+.labubu:hover .linha {
+	opacity: 1;
+	width: 75%;
+	animation: fortnite .8s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes fortnite {
+	0% {width: 75%;}
+	50% {width: 85%;}
+	100% {width: 75%;}
+}
+
+#r {
+	position: relative;
+	left: 0px;
+	transition: 0.3s;
+}
+
+#l {
+	position: relative;
+	transition: 0.3s;
+}
+
+.labubu:hover #r {
+	animation: oscilatorr .8s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes oscilatorr {
+	0% {left: 0px;}
+	50% {left: -5px;}
+	100% {left: 0px;}
+}
+
+.labubu:hover #l {
+	animation: oscilatorl .8s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes oscilatorl {
+	0% {left: 0px;}
+	50% {left: 5px;}
+	100% {left: 0px;}
+}
+
+.labubu:hover{
+    background:white;
+	padding:10px 20px;
+}
+
+.labubu:hover a{
+    color:black !important;
+}
+
+
+.labubu:hover .setas {
+	opacity: 1;
+}
+
+/* nameracketeer dog */
+
+.herocontainer {
+	display: flex;
+	width: 500px;
+	height: 500px;
+	margin-left: auto; 
+	margin-right: 100px;
+	margin-top: -40px;
+}
+
+.dog {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
+/* title */
+
+.megatitle {
+	font-size: 50pt;
+}
+
+.megatitle2 {
+	display: inline-block;
+	width: fit-content;
+	margin-top: 90px;
+	font-size: 40pt;
+	will-change: transform;
+}
+
+
+.subheadertitle {
+	font-size: 20pt;
+}
+
+.textherocontainer {
+	margin-left: 80px;
+	margin-top: 50px;
+}
+
+#pg2 {
+  scroll-margin-top: 125px; 
+  text-align: left;
+}
+
+.spacer {
+	margin-top: 10000px;
+	margin-bottom: 10000px;
+}
+
+.ytshortpvactive {
+	background-color: black;
+	margin-left: auto;
+	margin-right: auto;
+	width: 500px;
+	height: 500px;
+}
+
+        :root {
+            --card-width: 240px;
+            --card-height: 426px;
+            --text-main: #ffffff;
+            --text-sub: #cbd5e1;
+            --font-family: 'Comic Sans MS', 'Comic Sans', cursive, sans-serif;
+        }
+		
+        main {
+            position: relative;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .carousel-container {
+            position: relative;
+            width: 100%;
+            height: 60vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 2rem;
+            perspective: 1200px;
+            transform-style: preserve-3d;
+        }
+
+        .video-card {
+            position: absolute;
+            width: var(--card-width);
+            height: var(--card-height);
+            border-radius: 12px;
+            background-color: #1a1a1a;
+            overflow: hidden;
+            transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), 
+                        filter 0.5s ease, 
+                        opacity 0.5s ease;
+            cursor: pointer;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+            will-change: transform;
+        }
+
+        .video-card img.thumbnail {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: opacity 0.4s ease;
+            z-index: 10;
+        }
+
+        .video-card.active img.thumbnail {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .video-title {
+            position: absolute;
+            top: 20px;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            z-index: 15;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8), -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+			transition: opacity 0.4s ease;
+        }
+		
+		.video-card .video-title {
+			opacity: 1;
+        }
+		
+				
+		.video-card.active .video-title {
+			opacity: 0;
+        }
+		
+		
+        .yt-iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none; /* Allows card clicks to pass through */
+            z-index: 5;
+            border: none;
+        }
+
+
+
+        #review-box {
+            position: absolute;
+            background-color: #0f0f0f;
+            border: 2px solid #222;
+            padding: 1.25rem;
+            width: 380px;
+            border-radius: 8px;
+            z-index: 200;
+            left: calc(50% + 40px);
+            top: calc(50% + 80px);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+            pointer-events: none;
+            box-shadow: 10px 10px 30px rgba(0,0,0,0.6);
+        }
+
+        #review-box.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .review-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 8px;
+        }
+
+        .review-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 4px;
+            background-color: #374151;
+            object-fit: cover;
+        }
+
+        .review-info {
+            display: flex;
+            flex-direction: column;
+			
+        }
+
+        .review-name {
+            font-size: 0.875rem;
+            font-weight: bold;
+            line-height: 1.2;
+			margin: 0;
+        }
+
+        .review-subs {
+            font-size: 0.75rem;
+            color: #9ca3af;
+            font-family: sans-serif;
+			margin-top: 10px;
+			margin-bottom:0;
+        }
+
+        .review-text {
+            font-size: 0.875rem;
+            color: var(--text-sub);
+            line-height: 1.4;
+        }
+
+        .controls-hint {
+            position: fixed;
+            bottom: 1rem;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.875rem;
+            font-family: sans-serif;
+            pointer-events: none;
+            z-index: 0;
+        }
+		
+		/* Initial hidden state for the carousel */
+#carousel, #review-box {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+    pointer-events: none; /* Prevent interaction while hidden */
+}
+
+/* Revealed state triggered by JS */
+#carousel.revealed, #review-box.revealed {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}

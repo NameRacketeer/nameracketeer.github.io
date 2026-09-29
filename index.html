@@ -1,12 +1,105 @@
 <!DOCTYPE HTML>
 
-<html>
-
+<html lang="en">
 <head>
-<title> WIP </title>
+<title> NameRacketeer </title>
 <meta name='robots' content='noindex,nofollow' />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<link rel="stylesheet" href="styles.css">
+   
 </head>
 
-<body style="background-color:#111111;">
+<body class="bgcont">
+<script type="text/javascript" src="eljava.js" defer></script>
+
+<nav class="navbar-custom">
+    <div class="nav-center">
+		<div class="labubu" onclick="window.location='#';">
+			<div>
+				<img class="setas" id="r" src="assets/r.png">
+				<a>Home</a>
+				<img class="setas" id="l" src="assets/l.png">
+			</div>
+			<div class="oceg"> 
+				<img class="linha" src="assets/linha.png">
+			</div>
+		</div>
+		
+				<div class="labubu" onclick="window.location='#pg2';">
+			<div>
+				<img class="setas" id="r" src="assets/r.png">
+				<a>Portfolio</a>
+				<img class="setas" id="l" src="assets/l.png">
+			</div>
+			<div class="oceg"> 
+				<img class="linha" src="assets/linha.png">
+			</div>
+		</div>
+		
+				<div class="labubu" onclick="window.location='bestiario.html';">
+			<div>
+				<img class="setas" id="r" src="assets/r.png">
+				<a>Services</a>
+				<img class="setas" id="l" src="assets/l.png">
+			</div>
+			<div class="oceg"> 
+				<img class="linha" src="assets/linha.png">
+			</div>
+		</div>
+		
+		
+				<div class="labubu" onclick="window.location='galeria.html';">
+			<div>
+				<img class="setas" id="r" src="assets/r.png">
+				<a>Contact</a>
+				<img class="setas" id="l" src="assets/l.png">
+			</div>
+			<div class="oceg"> 
+				<img class="linha" src="assets/linha.png">
+			</div>
+		</div>
+		
+    </div>
+
+</nav>
+<div style="display:flex;justify-content:center;">
+<div class="textherocontainer">
+	<p class="megatitle"> NameRacketeer </p>
+	<p class="subheadertitle"> Quality video editing<br>Fast turnaround<br>Good pricing rates!</p>
+</div>	
+
+<div class="herocontainer">
+	<img class="dog" src="assets/dog.png">
+</div>	
+</div>
+
+
+<div class="textherocontainer">
+<p class="megatitle2" id="pg2">Portfolio</p>
+</div>
+
+    <main>
+        <div id="carousel" class="carousel-container">
+            <!-- Dynamically populated cards go here -->
+        </div>
+
+        <div id="review-box">
+            <div class="review-header">
+                <img id="review-avatar" src="" alt="Avatar" class="review-avatar">
+                <div class="review-info">
+                    <h3 id="review-name" class="review-name">Name</h3>
+                    <p id="review-subs" class="review-subs">0 subscribers</p>
+                </div>
+            </div>
+            <p id="review-text" class="review-text">
+                Review text goes here...
+            </p>
+        </div>
+    </main>
+
+
+<p class="spacer"> </p>
+
 </body>
 </html>
