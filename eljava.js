@@ -229,7 +229,7 @@ function manageVideos() {
             ytPlayers[activeIndex] = new YT.Player(iframeId, {
                 videoId: item.videoId,
                 playerVars: {
-                    'autoplay': 1, 'mute': 1, 'controls': 0, 
+                    'autoplay': 1, 'mute': 0, 'controls': 1, 
                     'loop': 1, 'playlist': item.videoId, 'showinfo': 0, 'rel': 0
                 },
                 events: {

@@ -291,6 +291,7 @@ nav a{
 		
 		.video-card .video-title {
 			opacity: 1;
+			pointer-events: none;
         }
 		
 				
