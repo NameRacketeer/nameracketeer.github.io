@@ -273,7 +273,7 @@ nav a{
 
         .video-card.active img.thumbnail {
             opacity: 0;
-            pointer-events: none;
+            pointer-events: none !important;
         }
 
         .video-title {
@@ -291,12 +291,12 @@ nav a{
 		
 		.video-card .video-title {
 			opacity: 1;
-			pointer-events: none;
         }
 		
 				
 		.video-card.active .video-title {
 			opacity: 0;
+			pointer-events: none !important;
         }
 		
 		
@@ -306,7 +306,6 @@ nav a{
             left: 0;
             width: 100%;
             height: 100%;
-            pointer-events: none; /* Allows card clicks to pass through */
             z-index: 5;
             border: none;
         }
