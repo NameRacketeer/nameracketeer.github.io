@@ -7,7 +7,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta charset="UTF-8">
 <link rel="stylesheet" href="styles.css">
-   
+	
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="site.webmanifest">
+
+<audio id="sound1" src="assets/barco.wav" preload="auto"></audio>
 </head>
 
 <body class="bgcont">
@@ -37,7 +43,7 @@
 			</div>
 		</div>
 		
-				<div class="labubu" onclick="window.location='#';">
+				<div class="labubu" onclick="window.location='#pg3';">
 			<div>
 				<img class="setas" id="r" src="assets/r.png">
 				<a>Services</a>
@@ -49,7 +55,7 @@
 		</div>
 		
 		
-				<div class="labubu" onclick="window.location='#';">
+				<div class="labubu" onclick="window.location='#pg4';">
 			<div>
 				<img class="setas" id="r" src="assets/r.png">
 				<a>Contact</a>
@@ -63,21 +69,25 @@
     </div>
 
 </nav>
-<div style="display:flex;justify-content:center;">
+<div style="display:flex;justify-content:center;margin-top:5rem">
 <div class="textherocontainer">
 	<p class="megatitle"> NameRacketeer </p>
 	<p class="subheadertitle"> Quality video editing<br>Fast turnaround<br>Good pricing rates!</p>
 </div>	
 
 <div class="herocontainer">
-	<img class="dog" src="assets/dog.png">
+	<img class="dog" src="assets/dog.png" onclick="playWithRandomPitch()">
+		<div class="social">
+			<a target="_blank" href="https://www.youtube.com/@NameRacketeer?sub_confirmation=1"><img src="assets/youtube.png" alt="YouTube"></a>
+			<a target="_blank" href="https://www.instagram.com/nameracketeer/"><img src="assets/instagram.png" alt="Instagram"></a>
+		</div>
 </div>	
 </div>
 
 
-<div class="textherocontainer">
-<p class="megatitle2" id="pg2">Portfolio</p>
-</div>
+	<div class="textherocontainer" style="display:flex;justify-content:center;margin-left:0;">
+	<p class="megatitle3" id="pg2">Portfolio</p>
+	</div>	
 
     <main>
         <div id="carousel" class="carousel-container">
@@ -99,7 +109,79 @@
     </main>
 
 
-<p class="spacer"> </p>
+	<main>
+	<div class="textherocontainer" style="display:flex;justify-content:center;margin-left:0;">
+	<p class="megatitle3" id="pg3">Services</p>
+	</div>
+	
+	<div class="servicesc">
+		<div class="svcc">
+			<p class="cardtitle">Video editing</p>
+			<p class="carddesc">Gameplay videos<br>Informational videos<br>Ads/promotional<br>Shorts & reels<br>Talking-head<br>Retention-focused content</p>
+			<div class="clickme" onclick="window.location='#pg4';">
+			Let's talk!
+			</div>
+		</div>
+		<div class="svcc">
+			<p class="cardtitle">Thumbnails</p>
+			<p class="carddesc">Algorithm focused<br>Choose your style<br>High CTR<br><br><br><br></p>
+			<div class="clickme" onclick="window.location='#pg4';">
+			Let's talk!
+			</div>
+		</div>
+		<div class="svcc">
+			<p class="cardtitle">Graphic design</p>
+			<p class="carddesc">Logo & brand design<br>Brand style<br>Asset creation<br><br><br><br></p>
+			<div class="clickme" onclick="window.location='#pg4';">
+			Let's talk!
+			</div>
+		</div>
+	</div>
+	
+	
+	
+	<div class="textherocontainer" style="display:flex;justify-content:center;margin-left:0;">
+	<p class="megatitle3" id="pg4">Contact</p>
+	</div>
+	
+	<div class="ccc">
+		<div class="contactcard">
+			<div class="imgcontc">
+				<img src="assets/discord.png">
+			</div>
+			<div class="cardtitle2">
+			@nameracketeer
+			</div>
+			<div class="clickme" onclick="window.open('https://discord.com/users/390289097090138122', '_blank')">
+			Open DMs
+			</div>
+		</div>
+		
+		<div class="contactcard">
+			<div class="imgcontc">
+				<img src="assets/email.png">
+			</div>
+			<div class="cardtitle2">
+			typhamoon@gmail.com
+			</div>
+			<div class="clickme" onclick="window.open('mailto:typhamoon@gmail.com', '_blank')">
+			Send mail
+			</div>
+		</div>
+	</div>
+	
+	<div style="margin:1.5rem 0 1.5rem 0;">Currently, only payment method is PayPal through invoices.</div>
+	
+	</main>
+	
+	<footer style="display: flex;align-items: center;">
+	
+	<div style="color:#6f6f6f;margin:0 2rem 0 auto;">
+            © 2026 NameRacketeer - All rights reserved
+     </div>
+		
+	</footer>
+
 
 </body>
 </html>

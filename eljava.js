@@ -1,65 +1,22 @@
-let isTicking = false;
-let carouselRevealed = false; // Tracks if the carousel has appeared yet
+let carouselRevealed = false;
 
 window.addEventListener('scroll', () => {
-  if (!isTicking) {
-    window.requestAnimationFrame(() => {
-      updateTitlePosition();
-      isTicking = false;
-    });
-    isTicking = true;
+  const scrollTop = window.scrollY || document.documentElement.scrollTop;
+
+  // Trigger once scrolled 500px down
+  if (scrollTop >= 500 && !carouselRevealed) {
+    carouselRevealed = true;
+
+    setTimeout(() => {
+      document.getElementById('carousel')?.classList.add('revealed');
+      document.getElementById('review-box')?.classList.add('revealed');
+
+      if (typeof manageVideos === 'function') {
+        manageVideos();
+      }
+    }, 500);
   }
 });
-
-function easeInOutCubic(x) {
-  return 1 - Math.pow(1 - x, 1.05);
-}
-
-function updateTitlePosition() {
-  const title = document.querySelector('.megatitle2');
-  if (!title) return;
-
-  const scrollTop = window.scrollY || document.documentElement.scrollTop;
-  const windowHeight = window.innerHeight;
-
-  const titleRect = title.getBoundingClientRect();
-  const elementPageTop = titleRect.top + scrollTop;
-
-  const startScroll = elementPageTop - windowHeight + 150;
-  const endScroll = elementPageTop - 125;
-
-  let progress = (scrollTop - startScroll) / (endScroll - startScroll);
-  progress = Math.max(0, Math.min(1, progress));
-
-  const easedProgress = easeInOutCubic(progress);
-
-  const style = window.getComputedStyle(title);
-  const matrix = new DOMMatrixReadOnly(style.transform);
-  const currentTranslateX = matrix.m41; 
-  
-  const naturalLeft = titleRect.left - currentTranslateX;
-  const elementWidth = titleRect.width;
-
-  const targetX = (window.innerWidth / 2) - (naturalLeft + elementWidth / 2);
-
-  const moveX = easedProgress * targetX;
-  title.style.transform = `translateX(${moveX}px)`;
-
-  // --- NEW: Trigger Carousel Reveal ---
-  // If the title has finished centering and the carousel is still hidden
-  if (progress >= 1 && !carouselRevealed) {
-      carouselRevealed = true;
-      
-      // Wait 0.5 seconds (500ms), then apply the reveal classes
-      setTimeout(() => {
-          document.getElementById('carousel').classList.add('revealed');
-          document.getElementById('review-box').classList.add('revealed');
-          
-          // Now that it's visible, try to play the active video
-          manageVideos(); 
-      }, 500);
-  }
-}
 
 const videoDatabase = [
     { id: 1, title: "Bloxfeed 1", videoId: "uQe8S3UA4kw", reviewerName: "Admin Playz", subs: "4.37k", reviewText: "NameRacketeer is a professional video editor who knows how long for but excellent quality. During my recent short, 0:00 to 0:28 he finishes it for 28 minutes, I asked him what to do and he bring it to life, what I asked for, and more. I would recommend editing this guy.", thumbnailPath: "assets/snapshot1.jpg", avatar: "https://yt3.googleusercontent.com/xrXGiiA4SJL5hFzF3o09b0GZ5_yKYZ0yEDgEHQ12tUOc7kB7YvzNTnvlraLUz80dG3CwTdeDbg=s160-c-k-c0x00ffffff-no-rj" },
@@ -288,3 +245,18 @@ function setupEventListeners() {
 }
 
 window.addEventListener('DOMContentLoaded', initApp);
+
+
+function playWithRandomPitch() {
+    const audio = new Audio('assets/barco.wav');
+    
+	audio.preservesPitch = false;
+    audio.webkitPreservesPitch = false;
+    const minRate = 0.7;
+    const maxRate = 1.4;
+    const randomRate = Math.random() * (maxRate - minRate) + minRate;
+    
+    audio.playbackRate = randomRate;
+    audio.currentTime = 0; 
+    audio.play();
+  }
