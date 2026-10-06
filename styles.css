@@ -1,9 +1,10 @@
 html, body {
     max-width: 100%;
-    overflow-x: hidden;
 	scroll-behavior: smooth;
+	-ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox, Safari 18.2+, Chromium 121+ */
+	overflow: -moz-scrollbars-none;
 }
-
 
 
 @font-face {
@@ -295,9 +296,7 @@ nav a{
             border-radius: 12px;
             background-color: #1a1a1a;
             overflow: hidden;
-            transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), 
-                        filter 0.5s ease, 
-                        opacity 0.5s ease;
+            transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), filter 0.5s ease, opacity 0.5s ease;
             cursor: pointer;
             box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
             display: flex;
@@ -541,8 +540,8 @@ nav a{
 }
 
 .cardtitle2 {
-	
-	font-size: 2rem;
+	max-width:100%;
+	font-size: 1.4rem;
 	text-align: center;
 }
 
@@ -622,11 +621,37 @@ margin: -10vw auto 0 auto;
 
 #review-box {
     left: auto;
-    top: calc(50% + 90px);
+    top: calc(50% + 150px);
 	max-width: 100%;
 }
 
+.servicesc, .ccc {
+	flex-direction: column;
+}
+
+.svcc {
+	width: 60vw;
+	height: 60vh;
+	margin: 2rem 0px 0 0px;
+}
+
+#pg3 {
+	margin-top: 12rem;
+}
 
 
+.contactcard {
+	width: 60vw;
+	height: 60vh;
+	margin: 2rem 20px 0 20px;
+}
+
+.clickme {
+	width: 24vw;
+	height: 8vh;
+	margin:0 auto 0 auto;
+	margin-top: 8vh;
+
+}
   }
 }

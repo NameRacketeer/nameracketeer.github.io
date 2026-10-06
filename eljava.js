@@ -19,7 +19,10 @@ window.addEventListener('scroll', () => {
 });
 
 const videoDatabase = [
-    { id: 1, title: "Bloxfeed 1", videoId: "uQe8S3UA4kw", reviewerName: "Admin Playz", subs: "4.37k", reviewText: "NameRacketeer is a professional video editor who knows how long for but excellent quality. During my recent short, 0:00 to 0:28 he finishes it for 28 minutes, I asked him what to do and he bring it to life, what I asked for, and more. I would recommend editing this guy.", thumbnailPath: "assets/snapshot1.jpg", avatar: "https://yt3.googleusercontent.com/xrXGiiA4SJL5hFzF3o09b0GZ5_yKYZ0yEDgEHQ12tUOc7kB7YvzNTnvlraLUz80dG3CwTdeDbg=s160-c-k-c0x00ffffff-no-rj" },
+    { id: 1, title: "Bloxfeed", videoId: "uQe8S3UA4kw", reviewerName: "Admin Playz", subs: "4.37k", reviewText: "NameRacketeer is a professional video editor who knows how long for but excellent quality. During my recent short, 0:00 to 0:28 he finishes it for 28 minutes, I asked him what to do and he bring it to life, what I asked for, and more. I would recommend editing this guy.", thumbnailPath: "assets/snapshot1.jpg", avatar: "https://yt3.googleusercontent.com/xrXGiiA4SJL5hFzF3o09b0GZ5_yKYZ0yEDgEHQ12tUOc7kB7YvzNTnvlraLUz80dG3CwTdeDbg=s160-c-k-c0x00ffffff-no-rj" },
+	{ id: 2, title: "Chris Hansen", videoId: "FV_sy9o15WQ", reviewerName: "Admin Playz", subs: "4.37k", reviewText: "NameRacketeer is a professional video editor who knows how long for but excellent quality. During my recent short, 0:00 to 0:28 he finishes it for 28 minutes, I asked him what to do and he bring it to life, what I asked for, and more. I would recommend editing this guy.", thumbnailPath: "assets/snapshot2.jpg", avatar: "https://yt3.googleusercontent.com/xrXGiiA4SJL5hFzF3o09b0GZ5_yKYZ0yEDgEHQ12tUOc7kB7YvzNTnvlraLUz80dG3CwTdeDbg=s160-c-k-c0x00ffffff-no-rj" },
+	{ id: 3, title: "Geddan", videoId: "6PGxEAN8aNE", reviewerName: "LameSniper16", subs: "1.93k", reviewText: "Very skilled editor and animator. I asked him to animate a short for me and he was able to finish it all in Blender in a single day. He is really that good.", thumbnailPath: "assets/snapshot3.jpg", avatar: "https://yt3.ggpht.com/5GP1JLLDL-qjfUReVET82UX6Yl8lCYk7gLdlCyPqRkpd0P6Kxg6VZYYSUgarsMN4OxzF77PQyA=s88-c-k-c0x00ffffff-no-rj" },
+
 ];
 
 let carouselData = [];
