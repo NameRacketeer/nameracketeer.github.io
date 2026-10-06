@@ -1,6 +1,10 @@
-html {
-  scroll-behavior: smooth;
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+	scroll-behavior: smooth;
 }
+
+
 
 @font-face {
   font-family: 'undertale';
@@ -20,8 +24,6 @@ body {
 	padding: 0;
 	box-sizing:border-box;
 	font-family: undertale, Arial, Helvetica, sans-serif;
-	  scroll-behavior: smooth;
-
 }
 .bgcont {
 position: relative;
@@ -86,6 +88,8 @@ nav {
     border:2px solid rgba(255,255,255,0.3);
 	cursor: pointer;
     transition:0.3s;
+	user-select: none;
+	-moz-user-select: none;
 }
 
 .labubu div {
@@ -594,16 +598,17 @@ footer {
 }
 
 .subheadertitle {
-	font-size: 20pt;
+	font-size: 5vw;
 	text-align:center;
 }
 
 .herocontainer {
 	display: flex;
 	flex-direction: column;
+	max-width:100%;
 	width: 500px;
 	height: 500px;
-margin: -40px auto 0 auto;
+margin: -10vw auto 0 auto;
 }
 
 .dog {
@@ -611,9 +616,16 @@ margin: -40px auto 0 auto;
 	width: 30rem;
 	max-width:100%;
 	height: auto;
-	margin: -70px auto 0 auto;
+	margin: -8vw auto 0 auto;
 	object-fit: contain;
 }
+
+#review-box {
+    left: auto;
+    top: calc(50% + 90px);
+	max-width: 100%;
+}
+
 
 
   }
