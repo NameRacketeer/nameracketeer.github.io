@@ -458,6 +458,7 @@ nav a{
 }
 
 .svcc {
+	position: relative;
 	width: 25vw;
 	height: 60vh;
 	border-radius: 10px;
@@ -470,10 +471,10 @@ nav a{
 }
 
 .svcc:hover {
-	transform: scale(1.0200000067676767676767676767676767676767);
+	transform: scale(1.02);
 	transform: translateY(-10px);
 	outline-width: 5px;
-}
+}	
 
 
 .cardtitle {
@@ -488,13 +489,17 @@ nav a{
 }
 
 .clickme {
+	position: absolute;
+	bottom: 4vh;
+	right:0;
+	left:0;
+	margin-inline: auto; 
+    width: fit-content;
 	border-radius: 10px;
 	text-align: center;
 	background-color: #fc345c;
 	width: 12vw;
 	height: 8vh;
-	margin:0 auto 0 auto;
-	margin-top: 8vh;
 	display: flex;
     align-items: center;
     justify-content: center; 
@@ -534,6 +539,8 @@ nav a{
 	outline-width: 5px;
 }
 .imgcontc {
+	display: flex;
+	justify-content: center;
 	width: 15rem;
 	margin: 0 auto 0 auto;
 }
@@ -664,5 +671,12 @@ margin: -10vw auto 0 auto;
 	margin-top: 8vh;
 
 }
+
+.carddesc {
+  font-size: 15pt;
+  margin-left: 6vw;
+  margin-right: 6vw;
+}
+
   }
 }
