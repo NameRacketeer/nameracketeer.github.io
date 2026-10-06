@@ -27,23 +27,30 @@ body {
 	font-family: undertale, Arial, Helvetica, sans-serif;
 }
 .bgcont {
-position: relative;
+  position: relative;
   min-height: 100vh;
+  min-height: 100dvh; /* accounts for mobile address bar */
   color: white;
 }
 
 .bgcont::before {
   content: "";
   position: fixed;
-  top: -20rem;
-  left: -20rem;
-  right: -20rem;
-  bottom: -20rem;
+  inset: 0;
   z-index: -1;
   background-image: url('assets/1.png');
   background-size: cover;
   background-position: center;
-  filter: blur(60px);
+}
+
+/* Add a pseudo-element or overlay to apply backdrop blur */
+.bgcont::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  backdrop-filter: blur(60px);
+  -webkit-backdrop-filter: blur(60px); /* required for iOS Safari */
 }
 
 /* navbar */
@@ -61,7 +68,7 @@ nav {
 }
 
 .navbar-custom{
-    position:sticky;
+    position:fixed;
     top:0;
     z-index:1000;
     display:flex;
@@ -571,18 +578,23 @@ footer {
 .ifyouarereadingthisyouhavetosendthissiteto5peopleorelseyoullhave10yearsofbadluckmuahahahaimevil {
 	display:flex;
 	justify-content:center;
-	margin-top:5rem;
+	margin-top:10rem;
 }
 
 /* mobile */
 
 @media screen and (width <= 1000px) {
 
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 .ifyouarereadingthisyouhavetosendthissiteto5peopleorelseyoullhave10yearsofbadluckmuahahahaimevil {
 	display:flex;
 	flex-direction: column;
 	justify-content:center;
-	margin-top:0rem;
+	margin-top:5rem;
 }
 
 .textherocontainer{
@@ -611,7 +623,7 @@ margin: -10vw auto 0 auto;
 }
 
 .dog {
-	z-index:-1;
+	z-index:0;
 	width: 30rem;
 	max-width:100%;
 	height: auto;
