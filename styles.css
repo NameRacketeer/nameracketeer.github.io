@@ -507,6 +507,7 @@ nav a{
 	outline-width: 0px;
 	outline-color:white;
 	outline-style: solid;
+	cursor: pointer;
 }
 
 .clickme:hover {
